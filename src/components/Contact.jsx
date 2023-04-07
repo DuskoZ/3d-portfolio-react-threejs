@@ -17,8 +17,7 @@ const Contact = () => {
     const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
-        const { target } = e;
-        const { name, value } = target;
+        const { name, value } = e.target;
 
         setForm({
             ...form,
@@ -36,7 +35,7 @@ const Contact = () => {
                 import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
                 {
                     from_name: form.name,
-                    to_name: "JavaScript Mastery",
+                    to_name: "John Doe",
                     from_email: form.email,
                     to_email: "example@email.com",
                     message: form.message,
